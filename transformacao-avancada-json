@@ -1,0 +1,43 @@
+
+
+## 1. Converter estruturas JSON em tabelas
+
+- Ao carregar arquivos JSON, o Power Query pode apresentar os dados como registros agrupados.
+- Acesse a guia "Converter" e selecione "Para Tabela" para iniciar o processo de estruturação.
+- Em seguida, expanda os campos da coluna "Value" para exibir os dados brutos.
+
+## 2. Transpor colunas e linhas
+
+- Se os dados estiverem dispostos horizontalmente (colunas como registros), selecione todas as colunas e use a opção "Transformar > Transpor".
+- Após a transposição, promova a primeira linha como cabeçalho com "Usar Primeira Linha como Cabeçalho".
+
+## 3. Substituir caracteres e formatar texto
+
+- Para substituir símbolos como underscores `_`, utilize "Transformar > Substituir Valores" e troque por espaço.
+- Para formatar o texto (como colocar cada palavra com letra maiúscula), clique com o botão direito na coluna > "Transformar > Colocar Cada Palavra em Maiúscula".
+
+## 4. Padronizar caminhos de arquivos com parâmetros
+
+- Crie um parâmetro de texto para representar o diretório dos arquivos:  
+  "Página Inicial > Gerenciar Parâmetros > Novo".
+- Nomeie como `caminhoPasta`, defina como obrigatório, tipo texto e insira o diretório base como valor atual.
+- Nas etapas de fonte, substitua o caminho fixo pelo parâmetro concatenado com o nome do arquivo:  
+  `File.Contents(caminhoPasta & "nome-do-arquivo.json")`
+
+## 5. Corrigir problemas de tipagem automática
+
+- Ao importar dados, o Power Query pode aplicar automaticamente tipos incorretos (por exemplo, interpretar `13.29` como `1329`).
+- Para resolver, remova a etapa "Tipo Alterado".
+- Redefina o tipo manualmente com base na localidade correta:  
+  "Alterar Tipo > Usando a Localidade" > Tipo: Número decimal | Localidade: Inglês (Estados Unidos).
+- Para aplicar em várias colunas, selecione múltiplas colunas com Ctrl e repita o processo.
+
+## 6. Desativar a detecção automática de tipos
+
+- Para assumir total controle do tipo de dados:
+  - Vá em "Arquivo > Opções e Configurações > Opções".
+  - Em "Carregamento de Dados", selecione: **"Nunca detectar tipos de colunas e cabeçalhos de fontes não estruturadas"**.
+
+---
+
+com esses procedimentos, tenho mais controle
