@@ -1,0 +1,44 @@
+# 📊 Projeto de Business Intelligence com Power BI
+
+Este repositório contém todas as etapas de desenvolvimento de um projeto completo de Business Intelligence usando o Power BI Desktop. O projeto foi construído com foco em boas práticas de ETL (Extração, Transformação e Carga), modelagem de dados e criação de dashboards interativos.
+
+## 🚀 Objetivos do Projeto
+
+- Realizar conexões com diferentes tipos de arquivos (Excel, CSV, JSON, XML)
+- Utilizar o Power Query Editor para tratar e transformar os dados
+- Aplicar a linguagem M para transformações avançadas
+- Criar parâmetros e organizar diretórios de forma eficiente
+- Modelar dados com foco em performance e usabilidade
+- Construir dashboards interativos com insights claros e relevantes
+
+## 📂 Etapas do Projeto
+
+### 1. Conexão aos Dados
+- Importação de arquivos Excel, CSV, JSON e XML
+- Avaliação e escolha das melhores fontes de dados
+
+### 2. Transformação e Limpeza (Power Query Editor)
+- Extração e transformação de colunas
+- Uso de delimitadores e colunas de exemplo
+- Aplicação da linguagem M
+- Parametrização e organização do processo de ETL
+
+### 3. Modelagem dos Dados
+- Relacionamento entre tabelas
+- Escolha correta de cardinalidade
+- Garantia de integridade e performance nos relacionamentos
+
+### 4. Visualização (Dashboard)
+- Criação de visualizações relevantes
+- Layout limpo e intuitivo
+- Métricas-chave para tomada de decisão
+
+## 🧠 Conhecimentos Práticos Aplicados
+
+- Power BI Desktop
+- Power Query
+- Linguagem M
+- Modelagem de Dados
+- Visualização de Dados
+
+:)
